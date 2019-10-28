@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Games List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let item of games">
+    <ion-item (click)="changeUrl(item)">
+      <ion-card-content>
+        <ion-label>{{ item?.name }} | {{ item?.id.substring(0,4) }}
+        </ion-label>
+      </ion-card-content>
+    </ion-item>
+  </ion-card>
+
+  
+
+</ion-content>
